@@ -5,8 +5,7 @@ def my_select(collection)
     new_array = [] #does not modify the original appropriately
     while i<collection.length
       new_array << yield(collection[i])
-     collection.delete(nil)
-      i+=1
+    i+=1
     end
   else
     return
@@ -16,5 +15,5 @@ end
 
 my_select(collection) do
   |element|
- element if element.even?
+element
 end
